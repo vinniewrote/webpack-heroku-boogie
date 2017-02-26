@@ -1,0 +1,48 @@
+@import './reset';
+
+h1 {
+  color: blue;
+}
+.parkMasthead {
+	height: 20vh;
+	border: 1px solid #868585;
+	background: burlywood;
+}
+.parkFilter {
+	height: 75vh;
+	overflow: auto;
+	.attraction[data-landmarktype="restaurant"] {
+		// display: none;
+	}
+}
+.filterbar {
+	top: 0;
+	button {
+		width: 20%;
+		border: none;
+		background: green;
+		color: white;
+		&:hover {
+			background: blue;
+		}
+	}
+}
+
+nav {
+	height: 5vh;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	a {
+		button{
+			width: 25%;
+			background: blue;
+			height: 100%;
+			border: none;
+			color: white;
+			&:hover {
+				background: red;
+			}
+		}
+	}
+}
