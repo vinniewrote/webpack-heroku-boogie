@@ -7,6 +7,19 @@ export const LOCK_ERROR = 'LOCK_ERROR'
 export const LOGOUT_REQUEST = 'LOGOUT_REQUEST'
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 
+
+//add journal entry
+
+//set journal entry as a draft
+
+//edit journal draft
+
+//remove journal entry
+
+//log rides
+
+//remove logged rides
+
 function showLock() {
   return {
     type: SHOW_LOCK
