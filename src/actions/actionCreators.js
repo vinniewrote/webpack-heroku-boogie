@@ -7,18 +7,74 @@ export const LOCK_ERROR = 'LOCK_ERROR'
 export const LOGOUT_REQUEST = 'LOGOUT_REQUEST'
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 
-
 //add journal entry
+function addEntry(postId, details, i){
+  return {
+    type: 'ADD_ENTRY',
+    postId,
+    details,
+    i
+  }
+}
 
 //set journal entry as a draft
+function setDraft(postId, i){
+  return {
+    type: 'SET_DRAFT',
+    postId,
+    i
+  }
+}
 
 //edit journal draft
+function editDraft(postId, i){
+  return {
+    type: 'EDIT_DRAFT',
+    postId,
+    i
+  }
+}
 
 //remove journal entry
+function removeEntry(postId, details, i){
+  return {
+    type: 'REMOVE_ENTRY',
+    postId,
+    details,
+    i
+  }
+}
 
 //log rides
+function logRide(index) {
+  return {
+    type: 'LOG_RIDE',
+    index
+  }
+}
 
 //remove logged rides
+function removeRide(index){
+  return {
+    type: 'REMOVE_RIDE',
+    index
+  }
+}
+
+//increment logged ride
+function incrementride(index) {
+  return {
+    type: 'INCREMENT_RIDE',
+    index
+  }
+}
+//de-increment logged rides
+function decrementride(index) {
+  return {
+    type: 'DECREMENT_RIDE',
+    index
+  }
+}
 
 function showLock() {
   return {
