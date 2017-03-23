@@ -2,7 +2,7 @@ const entries = [
   {
     "entryId": "1161022966406956503",
     "entryTitle": "The Great Northwest",
-    "entryDate": "October 23, 2016",
+    "entryDate": "October 23, 2020",
     "entryhero": ""
   },
   {

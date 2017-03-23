@@ -1,4 +1,4 @@
-import { clientId, domain } from '../keys';
+import { clientId, domain, config } from '../keys';
 import Auth0Lock from 'auth0-lock';
 
 export const SHOW_LOCK = 'SHOW_LOCK'
@@ -7,6 +7,18 @@ export const LOCK_ERROR = 'LOCK_ERROR'
 export const LOGOUT_REQUEST = 'LOGOUT_REQUEST'
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 
+const base = Rebase.createClass(config);
+
+//fetch journal entries from firebase
+export function fetchEntry(){
+  base.fetch('entries', {
+    context: this,
+    asArray: true,
+    then(data){
+      console.log(data);
+    }
+  });
+}
 //add journal entry
 function addEntry(postId, details, i){
   return {

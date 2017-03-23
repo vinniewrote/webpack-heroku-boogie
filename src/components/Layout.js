@@ -15,6 +15,11 @@ class Layout extends React.Component {
   componentWillMount() {}
   componentWillUnmount() {}
 
+  componentDidMount() {
+    console.log("fetching firebase");
+    this.props.fetchEntry();
+  }
+
   render(){
     return(
       <div className='mttLayout'>
