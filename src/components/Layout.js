@@ -27,7 +27,7 @@ class Layout extends React.Component {
     asArray: true,
     then(data){
       console.log(data);
-      console.log(data[0].entryDate);
+      console.log(data[0].entryTitle);
     }
   });
   }
