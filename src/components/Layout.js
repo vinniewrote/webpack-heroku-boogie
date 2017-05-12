@@ -6,6 +6,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
 import DiscoverEntry from './DiscoverEntry';
+import { config } from '../keys';
+import Rebase from 're-base';
+
+const base = Rebase.createClass(config);
 
 class Layout extends React.Component {
   constructor(props) {
@@ -17,7 +21,15 @@ class Layout extends React.Component {
 
   componentDidMount() {
     console.log("fetching firebase");
-    this.props.fetchEntry();
+    // this.props.fetchEntry();
+    base.fetch('entries', {
+    context: this,
+    asArray: true,
+    then(data){
+      console.log(data);
+      console.log(data[0].entryDate);
+    }
+  });
   }
 
   render(){

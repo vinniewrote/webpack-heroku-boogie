@@ -1,5 +1,6 @@
 import { clientId, domain, config } from '../keys';
 import Auth0Lock from 'auth0-lock';
+import Rebase from 're-base';
 
 export const SHOW_LOCK = 'SHOW_LOCK'
 export const LOCK_SUCCESS = 'LOCK_SUCCESS'
@@ -10,15 +11,17 @@ export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
 const base = Rebase.createClass(config);
 
 //fetch journal entries from firebase
-export function fetchEntry(){
-  base.fetch('entries', {
-    context: this,
-    asArray: true,
-    then(data){
-      console.log(data);
-    }
-  });
-}
+// export function fetchEntry(){
+//   console.log(base);
+//   base.fetch('entries', {
+//     context: this,
+//     asObject: true
+//   }).then(data => {
+//     console.log(data);
+//   }).catch(error => {
+//     //handle error
+//   })
+// }
 //add journal entry
 function addEntry(postId, details, i){
   return {
